@@ -243,6 +243,8 @@ SQL Statement: `UPDATE table SET key1=?, key2=? WHERE id=?`
 
 instead of `PreparedStatement.executeQuery()` it becomes `PreparedStatement.executeUpdate()`
 
+instead of `@Produces("application/json")` it becomes `@Consumes({"application/json"})`
+
 If `.executeUpdate` returns > 0, the operation is successful
 
 ### Delete
@@ -262,6 +264,8 @@ Use `@PUT` annotation
 SQL Statement: `INSERT INTO table (col1, col2, col3) VALUES (v1, v2, v3), (v11, v22, v33)`
 
 Also use `PreparedStatement.executeUpdate()`
+
+`@Consumes({"application/json"})`
 
 If `.executeUpdate` returns > 0, the operation is successful
 
